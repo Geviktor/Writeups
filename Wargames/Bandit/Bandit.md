@@ -17,7 +17,7 @@
 ### [LEVEL 0]
 For this level, we need to connect to the machine with SSH.
 
-`ssh <username>@<ip/DNS> -p 2220`
+`ssh <username>@<IP> -p 2220`
 
 ![Bandit0](.Images/bandit0.png)
 
@@ -130,11 +130,77 @@ Now, we need to do reverse hexdump with xxd command.
 
 ![Bandin12-1](.Images/bandit12-1.png)
 
-Then we will find the type of file using the file command. We will investigate what the extension of this file type should be and add the required extension to the file name with the mv command. If this file is a compressed file (mostly such), we will decompress it with the required command.
+Then we will find the type of file using the [file](https://linux.die.net/man/1/file) command. We will investigate what the extension of this file type should be and add the required extension to the file name with the mv command. If this file is a compressed file (mostly such), we will decompress it with the required command.
 
 ![Bandit12-2](.Images/bandit12-2.png)
 
 We will repeat the same things until we reach the text file.
 
 ![Bandit12-3](.Images/bandit12-3.png)
+******
 
+### [LEVEL 13]
+In this section, we are asked to make an [ssh](https://linux.die.net/man/1/ssh) connection using a private key.
+
+`ssh -i <keyfile> <username>@<IP>`
+
+![Bandit13](.Images/bandit13.png)
+
+Now we can read the password file.
+
+![Bandit13-1](.Images/bandit13-1.png)
+******
+
+### [LEVEL 14]
+We can use [telnet](https://linux.die.net/man/1/telnet) or [netcat](https://linux.die.net/man/1/nc) for this challenge.
+
+![Bandit14](.Images/bandit14.png)
+******
+
+### [LEVEL 15]
+In this section, the port using [SSL encryption](https://www.digicert.com/ssl/). We will use [openssl](https://linux.die.net/man/1/openssl) command. [Can the telnet or netcat clients communicate over SSL?](https://superuser.com/questions/346958/can-the-telnet-or-netcat-clients-communicate-over-ssl)
+
+`openssl s_client -connect <IP>:<port>`
+
+![Bandit15](.Images/bandit15.png)
+![Bandit15-1](.Images/bandit15-1.png)
+******
+
+### [LEVEL 16]
+We can use [nmap](https://linux.die.net/man/1/nmap) for find ports. We will use [ssl-enum-ciphers](https://nmap.org/nsedoc/scripts/ssl-enum-ciphers.html) script for check SSL.
+
+`nmap --script ssl-enum-chiphers -p 31000-32000 localhost`
+
+According to the result of the scan, 5 ports are open and 2 ports are using SSL.
+
+Lets try normal ports first.
+
+![Bandit16](.Images/bandit16.png)
+
+So the password isn't in these ports. Lets try SSL ports.
+
+`openssl s_client -connect localhost:31790`
+
+![Bandit16-1](.Images/bandit16-1.png)
+
+Yes! that gave us an SSH private key. [We can connect bandit17 with this private key](#level-13).
+******
+
+### [LEVEL 17]
+We can check the difference between the two files using the [diff](https://www.computerhope.com/unix/udiff.htm) command.
+
+`diff -e <file1> <file2>`
+
+![Bandit17](.Images/bandit17.png)
+******
+
+### [LEVEL 18]
+In this level, we can't use SSH connection. But we can download a file with SSH using [scp](https://tecadmin.net/download-file-using-ssh/) command.
+
+![Bandit18](.Images/bandit18.png)
+******
+
+### [LEVEL 19]
+We can [run binary](https://stackoverflow.com/questions/9477157/how-to-run-binary-file-in-linux) with `./binary` command.
+
+![Bandit19](.Images/bandit19.png)
