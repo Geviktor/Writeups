@@ -2,12 +2,16 @@
 
 [*"The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames."*](https://overthewire.org/wargames/bandit/)
 
-0. [Level 0](#level-0) | 6. [Level 6](#level-6)    | 12. [Level 12](#level-12)
-1. [Level 1](#level-1) | 7. [Level 7](#level-7)    | 13. [Level 13](#level-13)
-2. [Level 2](#level-2) | 8. [Level 8](#level-8)    | 14. [Level 14](#level-14)
-3. [Level 3](#level-3) | 9. [Level 9](#level-9)    | 15. [Level 15](#level-15)
-4. [Level 4](#level-4) | 10. [Level 10](#level-10) | 16. [Level 16](#level-16)
-5. [Level 5](#level-5) | 11. [Level 11](#level-11) | 17. [Level 17](#level-17)
+0. [Level 0](#level-0) | 10. [Level 10](#level-10)
+1. [Level 1](#level-1) | 11. [Level 11](#level-11)
+2. [Level 2](#level-2) | 12. [Level 12](#level-12)
+3. [Level 3](#level-3) | 13. [Level 13](#level-13)
+4. [Level 4](#level-4) | 14. [Level 14](#level-14)
+5. [Level 5](#level-5) | 15. [Level 15](#level-15)
+6. [Level 6](#level-6) | 16. [Level 16](#level-16)
+7. [Level 7](#level-7) | 17. [Level 17](#level-17)
+8. [Level 8](#level-8) | 18. [Level 18](#level-18)
+9. [Level 9](#level-9) | 19. [Level 19](#level-19)
 ******
 
 ### [LEVEL 0]
