@@ -117,4 +117,24 @@ The password is encoded with rot13. We will decode it with [tr](https://man7.org
 `cat <file> | tr <parameter>`
 
 ![Bandit11](.Images/bandit11.png)
+******
+
+### [LEVEL 12]
+In this section, we will have to work on the file a bit. So let's create a directory under the [/tmp](https://www.fosslinux.com/41739/linux-tmp-directory-everything-you-need-to-know.htm) directory and copy our file there. We will use [cd](https://man7.org/linux/man-pages/man1/cd.1p.html), [mkdir](https://man7.org/linux/man-pages/man1/mkdir.1.html) and [cp](https://man7.org/linux/man-pages/man1/cp.1.html) command.
+
+![Bandit12](.Images/bandit12.png)
+
+(What does the [~](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html) and [.](https://www.linux.com/training-tutorials/linux-tools-meaning-dot/) do?) 
+
+Now, we need to do reverse hexdump with xxd command.
+
+![Bandin12-1](.Images/bandit12-1.png)
+
+Then we will find the type of file using the file command. We will investigate what the extension of this file type should be and add the required extension to the file name with the mv command. If this file is a compressed file (mostly such), we will decompress it with the required command.
+
+![Bandit12-2](.Images/bandit12-2.png)
+
+We will repeat the same things until we reach the text file.
+
+![Bandit12-3](.Images/bandit12-3.png)
 
