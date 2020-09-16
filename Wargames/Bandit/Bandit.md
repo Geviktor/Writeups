@@ -2,8 +2,13 @@
 
 ["The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames."](https://overthewire.org/wargames/bandit/)
 
-0. [Level 0](#level-0)
-5. [Level 5](#level-5)
+0. [Level 0](#level-0)		6. [Level 6](#level-6)
+1. [Level 1](#level-1)
+2. [Level 2](#level-2)
+3. [Level 3](#level-3)
+4. [Level 4](#level-4)
+5. [Level 2](#level-5)
+
 
 ### [LEVEL 0]
 For this level, we need to connect to the machine with SSH.
