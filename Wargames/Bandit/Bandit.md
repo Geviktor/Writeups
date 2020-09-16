@@ -7,5 +7,5 @@ For this level, we need to connect to the machine with SSH.
 
 `ssh <username>@<ip/DNS> -p 2220`
 
-!.[Bandit0](Images/bandit0.png)
+![Bandit0](Images/bandit0.png)
 
