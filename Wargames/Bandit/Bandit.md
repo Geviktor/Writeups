@@ -75,5 +75,42 @@ Again we can use [find](https://www.man7.org/linux/man-pages/man1/find.1.html) c
 (What is [*2>>/dev/null*](https://askubuntu.com/questions/350208/what-does-2-dev-null-mean) and why we use?)
 ******
 
+### [LEVEL 7]
+We will use cat and [grep](https://linux.die.net/man/1/grep) command with ["|(pipe)"](https://www.howtogeek.com/438882/how-to-use-pipes-on-linux/) symbol.
 
+` cat <file> | grep <word>`
+
+![Bandit7](.Images/bandit7.png)
+******
+
+### [LEVEL 8]
+We will [find unique text](https://stackoverflow.com/questions/13778273/find-unique-lines#13778360) in data.txt with [sort](https://www.man7.org/linux/man-pages/man1/sort.1.html) and [uniq](https://man7.org/linux/man-pages/man1/uniq.1.html) command.
+
+`sort <file> | uniq -u`
+
+![Bandit8](.Images/bandit8.png)
+******
+
+### [LEVEL 9]
+We can find password with strings and grep command.
+
+`strings <file> | grep <symbol>`
+
+![Bandit9](.Images/bandit9.png)
+******
+
+### [LEVEL 10]
+In this challenge, the password is encoded with base64. We can decode with [base64](https://www.man7.org/linux/man-pages/man1/base64.1.html) command.
+
+`base64 -d <file>`
+
+![Bandit10](.Images/bandit10.png)
+******
+
+### [LEVEL 11]
+The password is encoded with rot13. We will decode it with [tr](https://man7.org/linux/man-pages/man1/tr.1.html) command and [this table](https://www.chmag.in/articles/momsguide/decoding-rot-using-the-echo-and-tr-commands-in-your-linux-terminal/).
+
+`cat <file> | tr <parameter>`
+
+![Bandit11](.Images/bandit11.png)
 
