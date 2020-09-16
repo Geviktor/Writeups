@@ -70,7 +70,7 @@ Again we can use [find](https://www.man7.org/linux/man-pages/man1/find.1.html) c
 
 `find <directory> -user <user> -group <group> -size <size>`
 
-![Bandit6](.Images/bandit6.png)
+![Bandit6](.Images/bandit6.png) /
 (What is [*2>>/dev/null*](https://askubuntu.com/questions/350208/what-does-2-dev-null-mean) and why we use?)
 ******
 
