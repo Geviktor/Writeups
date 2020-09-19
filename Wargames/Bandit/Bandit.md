@@ -2,16 +2,16 @@
 
 [*"The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames."*](https://overthewire.org/wargames/bandit/)
 
-0. [Level 0](#level-0) | 10. [Level 10](#level-10)
-1. [Level 1](#level-1) | 11. [Level 11](#level-11)
-2. [Level 2](#level-2) | 12. [Level 12](#level-12)
-3. [Level 3](#level-3) | 13. [Level 13](#level-13)
-4. [Level 4](#level-4) | 14. [Level 14](#level-14)
-5. [Level 5](#level-5) | 15. [Level 15](#level-15)
-6. [Level 6](#level-6) | 16. [Level 16](#level-16)
-7. [Level 7](#level-7) | 17. [Level 17](#level-17)
-8. [Level 8](#level-8) | 18. [Level 18](#level-18)
-9. [Level 9](#level-9) | 19. [Level 19](#level-19)
+0. [Level 0](#level-0) | 10. [Level 10](#level-10) | 20. [Level 20](#level-20) | [Level 30](#level-30)
+1. [Level 1](#level-1) | 11. [Level 11](#level-11) | 21. [Level 21](#level-21) | [Level 31](#level-31)
+2. [Level 2](#level-2) | 12. [Level 12](#level-12) | 22. [Level 22](#level-22) | [Level 32](#level-32)
+3. [Level 3](#level-3) | 13. [Level 13](#level-13) | 23. [Level 23](#level-23) | [Level 33](#level-33)
+4. [Level 4](#level-4) | 14. [Level 14](#level-14) | 24. [Level 24](#level-24)
+5. [Level 5](#level-5) | 15. [Level 15](#level-15) | 25. [Level 25](#level-25)
+6. [Level 6](#level-6) | 16. [Level 16](#level-16) | 26. [Level 26](#level-26)
+7. [Level 7](#level-7) | 17. [Level 17](#level-17) | 27. [Level 27](#level-27)
+8. [Level 8](#level-8) | 18. [Level 18](#level-18) | 28. [Level 28](#level-28)
+9. [Level 9](#level-9) | 19. [Level 19](#level-19) | 29. [Level 29](#level-29)
 ******
 
 ### [LEVEL 0]
@@ -163,6 +163,7 @@ In this section, the port using [SSL encryption](https://www.digicert.com/ssl/).
 `openssl s_client -connect <IP>:<port>`
 
 ![Bandit15](.Images/bandit15.png)
+
 ![Bandit15-1](.Images/bandit15-1.png)
 ******
 
@@ -204,3 +205,34 @@ In this level, we can't use SSH connection. But we can download a file with SSH 
 We can [run binary](https://stackoverflow.com/questions/9477157/how-to-run-binary-file-in-linux) with `./binary` command.
 
 ![Bandit19](.Images/bandit19.png)
+******
+
+### [LEVEL 20]
+By running the binary file, you can find out how it works and what it does.
+
+![Bandit20](.Images/bandit20.png)
+
+While broadcasting bandit20's password from any port, we need to connect to that port using the binary file. We will do this with nc and two ssh connection.
+
+![Bandit20-1](.Images/bandit20-1.png)
+******
+
+### [LEVEL 21]
+This section is about [cron](https://opensource.com/article/17/11/how-use-cron-linux). If we check the /etc/cron.d/ directory, we will see that there is a file named cronjob_bandit22. We can read it to understand what it does.
+
+![Bandit21](.Images/bandit21.png)
+
+We learned that it runs the file /usr/bin/cronjob_bandit22.sh. When we read this file, we will see that the password of the bandit22 user is written in the file named /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv. We can read this file to learn the password.
+
+![Bandit21-1](.Images/bandit21-1.png)
+******
+
+### [LEVEL 22]
+We will use cron again. We can check /etc/cron.d again and read the file for bandit23.
+
+![Bandit22](.Images/bandit22.png)
+
+This simple shell script runs the whoami command and takes the md5 summary of its output and creates a file under /tmp. The password of the bandit23 user is written into this file.
+
+![Bandit22-1](.Images/bandit22-1.png)
+******
