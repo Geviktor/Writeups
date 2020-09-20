@@ -8,13 +8,13 @@
 
 ## [Scan/Enumeration]
 
-First of all, we can scan nmap.
+First of all, we can do nmap scan.
 
 `nmap -A -oN rootme.nmap <ip>`
 
 ![rootme-2](.Images/rootme-2.png)
 
-As you can see, SSH service is running on port 22 and Apache web server is running on port 80. For the web server, we can directory scan with gobuster. I will use [common.txt](https://github.com/v0re/dirb/blob/master/wordlists/common.txt) list for this scan.
+As you can see, SSH service is running on port 22 and Apache web server is running on port 80. For the web server, we can do directory scan with the gobuster. I will use [common.txt](https://github.com/v0re/dirb/blob/master/wordlists/common.txt) list for this scan.
 
 `gobuster dir -u http://<ip>/ -w common.txt`
 
@@ -40,8 +40,8 @@ Yes it worked. Let's download [php_reverse_shell](https://github.com/pentestmonk
 
 `nc -nvlp <port>`
 
-![rootme-7](.Images/rootme-7)
-![rootme-8](.Images/rootme-8)
+![rootme-7](.Images/rootme-7.png)
+![rootme-8](.Images/rootme-8.png)
 
 ******
 
