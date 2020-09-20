@@ -2,6 +2,6 @@
 
 *"A ctf for beginners, can you root me?"* -[ReddyyZ](https://tryhackme.com/p/ReddyyZ)
 
-![rootme](.Images/rootme.png)
+<img src=".Images/rootme.png" width="50">
 [RootMe](https://tryhackme.com/room/rrootme)
 ******
