@@ -1,6 +1,6 @@
 # Tartarus
 
-[<img src=".Images/tartarus.png" widt="75">](https://tryhackme.com/room/tartaraus)
+[<img src=".Images/tartarus.png" height="75">](https://tryhackme.com/room/tartaraus)
 
 *"This is a beginner box based on simple enumeration of services and basic privilege escalation techniques."* -[csenox](https://tryhackme.com/p/csenox)
 
