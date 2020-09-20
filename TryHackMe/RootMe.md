@@ -4,9 +4,9 @@
 
 *"A ctf for beginners, can you root me?"* -[ReddyyZ](https://tryhackme.com/p/ReddyyZ)
 
-1. [Scan/Enumeration](#Scan/Enumeration)
-2. [Gain Shell](#GainShell)
-3. [Privilege Escalation](#PrivilegeEscalation)
+1. [Scan/Enumeration](#scan/enumeration)
+2. [Gain Shell](#gain-shell)
+3. [Privilege Escalation](#privilege-escalation)
 
 ******
 
