@@ -51,7 +51,7 @@ Yes it worked. Let's download [php_reverse_shell](https://github.com/pentestmonk
 
 ## [Privilege Escalation]
 
-First of all, let's make shell more useful.
+First of all, let's make shell more beautiful.
 
 `export TERM=xterm`
 
