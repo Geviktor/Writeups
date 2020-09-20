@@ -54,6 +54,7 @@ Yes it worked. Let's download [php_reverse_shell](https://github.com/pentestmonk
 First of all, let's make shell more useful.
 
 `export TERM=xterm`
+
 `python -c 'import pty; pty.spawn("/bin/bash")'`
 
 ![rootme-9](.Images/rootme-9.png)
