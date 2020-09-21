@@ -32,7 +32,7 @@ You can use the shortcut key of the browser you are using to reach the source co
 ******
 
 ### [LEVEL 2]
-When we look at the source code of the page, we will see that it contains a directory called files.
+When we look at the source code of the page, we will see that it contains a directory called "files".
 
 ![natas2](.Images/natas2.png)
 
@@ -49,7 +49,7 @@ We can get the password of the natas3 user from this file.
 ******
 
 ### [LEVEL 3]
-When we look at the source code of the page, we see a message like this: *No more information leaks!! Not even Google will find it this time...*
+When we look at the source code of the page, we see a message like this: **No more information leaks!! Not even Google will find it this time...**
 
 If you search how google indexes a site, you will find information about crawlers. Within this information, you can find that the crawlers are using a file named robots.txt. So we can try looking at the robots.txt file.
 
@@ -79,5 +79,127 @@ Inside the request, we see a header named referer. We can edit here to make ours
 We got the password.
 
 ![natas4-2](.Images/natas4-2.png)
+
+******
+
+### [LEVEL 5]
+We need to review the request we sent in this section with burpsuite.
+
+![natas5](.Images/natas5.png)
+
+We send a parameter named loggedin in the cookie header. If we change the value of this parameter from 0(negative) to 1(positive), maybe we can be considered as logged in. Change the value and forward the request.
+
+![natas5-1](.Images/natas5-1.png)
+
+We got the password.
+
+![natas5-2](.Images/natas5-2.png)
+
+******
+
+### [LEVEL 6]
+
+If we enter the secret text, we will get the password. Let's check the source code.
+
+![natas6](.Images/natas6.png)
+
+Here we found a directory and filename. When we go to the file, we see a blank page. But if we check the source code, we will find the secret we need to enter the page.
+
+![natas6-1](.Images/natas6-1.png)
+
+We got the password. 
+
+![natas6-2](.Images/natas6-2.png)
+
+******
+
+### [LEVEL 7]
+In this level, we will use the [Directory traversal](https://portswigger.net/web-security/file-path-traversal) attack. If you look at the URL after clicking the home or about button on the page, you will see that the page variable in the index.php file is equal to a file name.
+
+`http://natas7.natas.labs.overthewire.org/index.php?page=home`
+
+Instead of this file, we can write the file where the password of the natas8 user is kept. We have the following information from [Natas](https://overthewire.org/wargames/natas/) homepage: **All passwords are also stored in /etc/natas_webpass/. E.g. the password for natas5 is stored in the file /etc/natas_webpass/natas5 and only readable by natas4 and natas5.** 
+
+Let's try to access the password file.
+
+`http://natas7.natas.labs.overthewire.org/index.php?page=../../../../../../etc/natas_webpass/natas8`
+
+And we got the password.
+
+![natas7](.Images/natas7.png)
+
+******
+
+### [LEVEL 8]
+In this section, we are asked to enter a secret. Let's look at the source code. We can see the encoded secret in the source code. We can also see the encryption algorithm.
+
+![natas8](.Images/natas8.png)
+
+We can decrypt the code by doing the opposite of the encryption process. I will use the [CyberChef](https://gchq.github.io/CyberChef/).
+
+`bin2hex > strrev > base64`
+
+![natas8-1](.Images/natas8-1.png)
+
+We got the password.
+
+![natas8-2](.Images/natas8-2.png)
+
+******
+
+### [LEVEL 9]
+If we look at the source code of the page, we see that the dictionary.txt file is searched with the grep command. 
+
+`grep -i $key dictionary.txt`
+
+So we can change the terminal command using the ";" sign.
+
+`; cat /etc/natas_webpass/natas10; ls`
+
+So the complete command will look like this:
+
+`grep -i; cat /etc/natas_webpass/natas10; ls dictionary.txt`
+
+We got the password.
+
+![natas9](.Images/natas9.png)
+
+******
+
+### [LEVEL 10]
+This section is the same as the previous section, but this time a few values are blocked. Let's look at the source code.
+
+```
+if($key != "") {
+    if(preg_match('/[;|&]/',$key)) {
+        print "Input contains an illegal character!";
+    } else {
+        passthru("grep -i $key dictionary.txt");
+    }
+```
+
+As you can see, the characters that we can interfere with the code are blocked. Instead of replacing the code, we can try exploiting the grep command. Let's check what happens when we enter a value like this:
+
+`/bin/bash /etc/passwd`
+
+So the complete command will look like this:
+
+`grep -i /bin/bash /etc/passwd dictionary.txt`
+
+As you can see, there are lines containing the "/bin/bash" in the /etc/passwd file. If we can find any letter that the natas11 user contains, we can access the password. We can try bruteforce to find the password.
+
+`a /etc/natas_webpass/natas11`
+
+So the complete command will look like this:
+
+`grep -i a /etc/natas_webpass/natas11 dictionary.txt`
+
+After a few tries, we learn that the password contains "c".
+
+`c /etc/natas_webpass/natas11`
+
+![natas11](.Images/natas11.png)
+
+******
 
 
