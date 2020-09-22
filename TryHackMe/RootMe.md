@@ -4,7 +4,7 @@
 
 *"A ctf for beginners, can you root me?"* -[ReddyyZ](https://tryhackme.com/p/ReddyyZ)
 
-<script src="https://tryhackme.com/badge/59136"></script>
+<img src="https://tryhackme-badges.s3.amazonaws.com/Gev.png" alt="TryHackMe">
 
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
