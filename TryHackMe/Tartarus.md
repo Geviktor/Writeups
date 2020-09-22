@@ -4,8 +4,6 @@
 
 *"This is a beginner box based on simple enumeration of services and basic privilege escalation techniques."* -[csenox](https://tryhackme.com/p/csenox)
 
-<img src="https://tryhackme-badges.s3.amazonaws.com/Gev.png" alt="TryHackMe">
-
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)
