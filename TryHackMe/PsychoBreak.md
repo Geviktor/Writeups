@@ -22,7 +22,7 @@ We can see that FTP, SSH and Apache http services are running. FTP doesn't allow
 
 On the page that welcomes us, when we look at the source code, we will see the "/sadistRoom" directory. The sadist room will give us the key to locker room.
 
-In locker room, we find a encoded text. I use a [cipher identifier](https://www.boxentriq.com/code-breaking/cipher-identifier) to find out what the text has been encrypted with.
+In locker room, we find a encoded text. I use a [cipher identifier](https://www.boxentriq.com/code-breaking/cipher-identifier) to find out what the text has been encrypted with and i decode it with [CyberChef](https://gchq.github.io/CyberChef/).
 
 ![psycho-2](.Images/psycho-2.png)
 ![psycho-3](.Images/psycho-3.png)
@@ -67,9 +67,9 @@ When you listen to the audio file, you will see that it has morse code. To decod
 
 ![psycho-8](.Images/psycho-8.png)
 
-I will use this word to extract files from "Joseph_Oda.jpg" with the steghide tool.
+I will use this word to extract files from "Joseph_0da.jpg" with the steghide tool.
 
-`steghide extract -sf Joseph_Oda.jpg`
+`steghide extract -sf Joseph_0da.jpg`
 
 ![psycho-9](.Images/psycho-9.png)
 
@@ -80,17 +80,17 @@ Now we have the FTP information, we can try to login. In FTP server, we have two
 As it is understood, we will need to bruteforce the program file with the dictionary file we found. I will use the python language for this.
 
 ```
-import os                                                                                                                                                                       
- 
+import os
+
 f = open('random.dic','r')
- 
-for i in f: 
+
+for i in f:
     i = i.replace("\n","")
     result = os.popen(f"./program {i}").read()
     if "Incorrect" not in result:
         print(result)
         break
- 
+
 f.close()
 ```
 
