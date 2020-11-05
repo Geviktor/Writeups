@@ -30,6 +30,8 @@ Sitede daha derinlere inebilmek için gobuster'ı kullanarak dizin tarması yap�
 
 ![pickle-3](.Images/pickle-3.png)
 
+******
+
 ## [Gain Shell]
 
 Bulduğumuz login.php üzerinden yine daha önce bulduğumuz kullanıcı adını ve şifreyi kullanarak giriş yapıyorum. "portal.php" sayfasına ulaştığımda öncelikle kaynak kodu kontrol ediyorum ve şifrelenmiş bir metin ile karşılaşıyorum. Bunu çözmeyi denedim fakat başaramadım, şu anlık bırakıp sayfanın ne yaptığını incelemeye karar veriyorum.
@@ -41,6 +43,8 @@ Sayfa benden aldığı input'u makinede çalıştırıyor ve output'u bana geri 
 Ayrıca sistemde home dizininde "rick" isimli bir dizinle karşılaşıyorum. Doğal olarak bunun bir kullanıcı olduğunu düşünüyorum fakat daha sonra bu dizinin root tarafından oluşturulduğunu ve rick isimli bir kullanıcı olmadığını anlıyorum.
 
 ![pickle-4](.Images/pickle-4.png)
+
+******
 
 ## [Privilege Escalation]
 
