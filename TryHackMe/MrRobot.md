@@ -2,7 +2,7 @@
 
 [<img src=".Images/robot.jpeg" height="199">](https://tryhackme.com/room/mrrobot)
 
-*"Based on the Mr. Robot show, can you root this box?"* -[stuxnet](https://tryhackme.com/p/ben)
+*"Based on the Mr. Robot show, can you root this box?"* -[ben](https://tryhackme.com/p/ben)
 
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
