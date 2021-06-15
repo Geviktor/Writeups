@@ -3,7 +3,8 @@
 [<img src=".Images/mustac.png">](https://tryhackme.com/room/mustacchio)
 
 "Easy boot2root Machine" -[zyeinn](https://tryhackme.com/p/zyeinn)
-Difficulty: <span style="color: green;">Easy</span>
+
+Difficulty: <span style="color:green">Easy</span>
 
 
 1. [Scan/Enumeration](#scan/enumeration)
@@ -36,10 +37,12 @@ Inside we have a input box. I'm trying to give random texts but I can't get one.
 
 Now we can give input and see output on the page. If you google 'XML vulnerabilities', you encounter XXE. You can learn how to exploit it with help of several [resources](https://portswigger.net/web-security/xxe). I'm using this:
 
-```<!DOCTYPE foo [ <!ELEMENT foo ANY > <!ENTITY gev SYSTEM  "file:///etc/passwd" >]>
+```
+<!DOCTYPE foo [ <!ELEMENT foo ANY > <!ENTITY gev SYSTEM  "file:///etc/passwd" >]>
 <comment>
 <name>&gev;</name>
-</comment>```
+</comment>
+```
 
 In passwd file I find two user: joe and barry. I can connect ssh with their id_rsa key so im trying find id rsa on '/home/joe/.ssh/id_rsa' and '/home/barry/.ssh/id_rsa'. I find barry's id_rsa file and I see it is encrypted. I'm cracking it with john and [rockyou.txt](https://github.com/danielmiessler/SecLists/blob/master/Passwords/Leaked-Databases/rockyou.txt.tar.gz).
 
@@ -53,13 +56,17 @@ Now we need change id_rsa privilege with `chmod 600 id_rsa` command. After that 
 
 I'm trying `sudo -l` but we need barry's password for this. I check suid files with `find / -perm -4000 2>/dev/null` and i see '/home/joe/live_log' file. When i execute this file i see connection logs. I use the strings command to fully understand what the file is doing. I see this lines:
 
-```Live Nginx Log Reader                                                                                                                                       
-tail -f /var/log/nginx/access.log```
+```
+Live Nginx Log Reader                                                                                                                                       
+tail -f /var/log/nginx/access.log
+```
 
 I understand when i run this file, the file run this tail command with root privilege. I can exploit this with change the PATH variable. I'm going to /dev/shm directory and create a simple bash file named tail:
 
-```#!/bin/bash
-bash```
+```
+#!/bin/bash
+bash
+```
 
 I do this file executable with `chmod +x tail` and add /dev/shm path to PATH variable.
 
