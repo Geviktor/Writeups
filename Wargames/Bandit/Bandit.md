@@ -196,9 +196,15 @@ We can check the difference between the two files using the [diff](https://www.c
 ******
 
 ### [LEVEL 18]
-In this level, we can't use SSH connection. But we can download a file with SSH using [scp](https://tecadmin.net/download-file-using-ssh/) command.
+In this level we can use [scp](https://tecadmin.net/download-file-using-ssh/) command without connection SSH.
 
 ![Bandit18](.Images/bandit18.png)
+
+But also we can do SSH connection with `-t` flag.
+
+`ssh -t <user>@<host> -p <port> /bin/sh`
+
+![Bandit18-1](.Images/bandit18-1.png)
 ******
 
 ### [LEVEL 19]
