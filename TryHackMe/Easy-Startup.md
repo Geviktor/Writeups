@@ -4,6 +4,8 @@
 
 *"Abuse traditional vulnerabilities via untraditional means."* -[r1gormort1s](https://tryhackme.com/p/r1gormort1s)
 
+Dificulty: *Easy*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)

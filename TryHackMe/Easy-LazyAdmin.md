@@ -4,6 +4,8 @@
 
 *"Easy linux machine to practice your skills"* -[MrSeth6797](https://tryhackme.com/p/MrSeth6797)
 
+Difficulty: *Easy*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)

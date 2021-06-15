@@ -4,6 +4,8 @@
 
 *"Walkthrough on exploiting a Linux machine. Enumerate Samba for shares, manipulate a vulnerable version of proftpd and escalate your privileges with path variable manipulation. "* -[tryhackme](https://tryhackme.com/p/tryhackme)
 
+Difficulty: *Easy*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)

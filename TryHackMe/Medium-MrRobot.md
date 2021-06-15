@@ -4,6 +4,8 @@
 
 *"Based on the Mr. Robot show, can you root this box?"* -[ben](https://tryhackme.com/p/ben)
 
+Difficulty: *Medium*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)

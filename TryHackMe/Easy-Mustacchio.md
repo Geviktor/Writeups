@@ -1,10 +1,10 @@
 # Mustacchio
 
-[<img src=".Images/mustac.png">](https://tryhackme.com/room/mustacchio)
+[<img src=".Images/mustac.png" height=199>](https://tryhackme.com/room/mustacchio)
 
 "Easy boot2root Machine" -[zyeinn](https://tryhackme.com/p/zyeinn)
 
-Difficulty: <span style="color:green">Easy</span>
+Difficulty: *Easy*
 
 
 1. [Scan/Enumeration](#scan/enumeration)

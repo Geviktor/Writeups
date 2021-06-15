@@ -4,6 +4,8 @@
 
 *"A new start-up has a few issues with their web server."* -[DarkStar7471](https://tryhackme.com/p/DarkStar7471)
 
+Difficulty: *Easy*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)

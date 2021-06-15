@@ -4,6 +4,8 @@
 
 *"A beginner level security challenge"* -[Deamon](https://tryhackme.com/p/Deamon)
 
+Difficulty: *Easy*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)

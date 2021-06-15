@@ -4,6 +4,8 @@
 
 *"This room is aimed for beginner level hackers but anyone can try to hack this box. There are two main intended ways to root the box."* -[Fsociety2006](https://tryhackme.com/p/Fsociety2006)
 
+Difficulty: *Easy*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)

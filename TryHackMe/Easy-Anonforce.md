@@ -4,6 +4,8 @@
 
 *"boot2root machine for FIT and bsides guatemala CTF* -[stuxnet](https://tryhackme.com/p/stuxnet)
 
+Difficulty: *Easy*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [User](#user)
 3. [Root](#root)

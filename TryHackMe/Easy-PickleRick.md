@@ -4,6 +4,8 @@
 
 *"A Rick and Morty CTF. Help turn Rick back into a human!"* -[tryhackme](https://tryhackme.com/p/tryhackme)
 
+Difficulty: *Easy*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)

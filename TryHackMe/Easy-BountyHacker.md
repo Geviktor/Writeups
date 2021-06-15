@@ -4,6 +4,8 @@
 
 *"You talked a big game about being the most elite hacker in the solar system. Prove it and claim your right to the status of Elite Bounty Hacker!"* -[Sevuhl](https://tryhackme.com/p/Sevuhl)
 
+Dificulty: *Easy*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)

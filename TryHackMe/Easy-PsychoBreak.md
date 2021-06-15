@@ -4,6 +4,8 @@
 
 *"Help Sebastian and his team of investigators to withstand the dangers that come ahead."* -[shafdo](https://tryhackme.com/p/shafdo)
 
+Dificulty: *Easy*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)

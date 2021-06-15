@@ -4,6 +4,8 @@
 
 *"A ctf for beginners, can you root me?"* -[ReddyyZ](https://tryhackme.com/p/ReddyyZ)
 
+Dificulty: *Easy*
+
 1. [Scan/Enumeration](#scan/enumeration)
 2. [Gain Shell](#gain-shell)
 3. [Privilege Escalation](#privilege-escalation)
