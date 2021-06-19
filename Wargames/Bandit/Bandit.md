@@ -2,10 +2,10 @@
 
 [*"The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames."*](https://overthewire.org/wargames/bandit/)
 
-0. [Level 0](#level-0) | 10. [Level 10](#level-10) | 20. [Level 20](#level-20) | [Level 30](#level-30)
-1. [Level 1](#level-1) | 11. [Level 11](#level-11) | 21. [Level 21](#level-21) | [Level 31](#level-31)
-2. [Level 2](#level-2) | 12. [Level 12](#level-12) | 22. [Level 22](#level-22) | [Level 32](#level-32)
-3. [Level 3](#level-3) | 13. [Level 13](#level-13) | 23. [Level 23](#level-23) | [Level 33](#level-33)
+0. [Level 0](#level-0) | 10. [Level 10](#level-10) | 20. [Level 20](#level-20) | 30. [Level 30](#level-30)
+1. [Level 1](#level-1) | 11. [Level 11](#level-11) | 21. [Level 21](#level-21) | 31. [Level 31](#level-31)
+2. [Level 2](#level-2) | 12. [Level 12](#level-12) | 22. [Level 22](#level-22) | 32. [Level 32](#level-32)
+3. [Level 3](#level-3) | 13. [Level 13](#level-13) | 23. [Level 23](#level-23) | 33. [Level 33](#level-33)
 4. [Level 4](#level-4) | 14. [Level 14](#level-14) | 24. [Level 24](#level-24)
 5. [Level 5](#level-5) | 15. [Level 15](#level-15) | 25. [Level 25](#level-25)
 6. [Level 6](#level-6) | 16. [Level 16](#level-16) | 26. [Level 26](#level-26)
@@ -241,4 +241,18 @@ We will use cron again. We can check /etc/cron.d again and read the file for ban
 This simple shell script runs the whoami command and takes the md5 summary of its output and creates a file under /tmp. The password of the bandit23 user is written into this file.
 
 ![Bandit22-1](.Images/bandit22-1.png)
-******
+
+
+### [LEVEL 23]
+Lets check cron.d/cronjob_bandit24
+
+![Bandit23](.Images/bandit23.png)
+
+We can understand bandit24 user running cronjob_bandit24.sh in every second. When we check cronjob_bandit24.sh we see, "Executing and deleting all scripts in /var/spool/$myname" and $myname variable is coming from whoami command so it must be "bandit24". We can write a little script for cat /etc/bandit_pass/bandit24 and write a readable file for us. For this I create a directory under /tmp/. An important thing, you need to do this directory and file permission 777 because bandit24 user can be run this file and write your directory.
+
+![Bandit23-1](.Images/bandit23-1.png)
+
+### [LEVEL 24]
+We need write a script for this level.
+
+![bandit24](.Images/bandit24.png)
