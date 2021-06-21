@@ -242,6 +242,7 @@ This simple shell script runs the whoami command and takes the md5 summary of it
 
 ![Bandit22-1](.Images/bandit22-1.png)
 
+******
 
 ### [LEVEL 23]
 Lets check cron.d/cronjob_bandit24
@@ -252,7 +253,55 @@ We can understand bandit24 user running cronjob_bandit24.sh in every second. Whe
 
 ![Bandit23-1](.Images/bandit23-1.png)
 
+******
+
 ### [LEVEL 24]
 We need write a script for this level.
 
 ![bandit24](.Images/bandit24.png)
+
+******
+
+### [LEVEL 25]
+
+When we login bandit25 we see that there is a id_rsa file for bandit26 user. As we know from level goal bandit26 user's shell is not /bin/bash. For learn which shell is using we can check passwd file with `cat /etc/passwd | grep bandit26`. We see it's running more command when we read this `/usr/bin/showtext` file.
+
+![bandit25](.Images/bandit25.png)
+
+After try to connect bandit26 with ssh and a lot of google search I realize that when we shrink the terminal we can run command over more. For trigger this I set terminal row size with `stty rows 5` after that, when I connect ssh I see I can run command over more. As I learned I open editor with `v` key. In here I change the shell veriable with `:set shell=/bin/bash` and after run `:!/bin/bash` 
+
+![bandit25-1](.Images/bandit25-1.png)
+
+******
+
+### [LEVEL 26]
+
+I try to run `bandit27-do` binary and it's saying *"Run a command as another user."*. So I'm trying `./bandit27-do cat /etc//etc/bandit_pass/bandit27`
+
+![bandit26](.Images/bandit26.png) 
+
+******
+
+### [LEVEL 27]
+
+I clone the repo to my computer with git using `git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo` command.
+
+![bandit27](.Images/bandit27.png)
+
+******
+
+### [LEVEL 28]
+
+I clone the repo to my computer with git using `git clone ssh://bandit28-git@bandit.labs.overthewire.org:2220/home/bandit28-git/repo` command. In .git folder I use `git log` command to see commits. I found a commit named *'add missing data'* and I use `git show <commit>` for see this commit.
+
+![bandit28](.Images/bandit28.png)
+
+******
+
+### [LEVEL 29]
+
+I clone the repo to my computer with git using `git clone ssh://bandit29-git@bandit.labs.overthewire.org:2220/home/bandit29-git/repo` command. I check git logs again but I cant find anything. I try to list branchs with `git branch -a` and I see that we have several branch in here. I search on google how to use git branchs and I find [this source](https://www.nobledesktop.com/learn/git/git-branches).
+
+![bandit29](.Images/bandit29.png)
+
+
