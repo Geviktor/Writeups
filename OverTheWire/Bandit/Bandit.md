@@ -2,19 +2,19 @@
 
 [*"The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames."*](https://overthewire.org/wargames/bandit/)
 
-0. [Level 0 -> LEVEL 1](#level-0) | 10. [Level 10](#level-10) | 20. [Level 20](#level-20) | 30. [Level 30](#level-30)
-1. [Level 1 -> LEVEL 2](#level-1) | 11. [Level 11](#level-11) | 21. [Level 21](#level-21) | 31. [Level 31](#level-31)
-2. [Level 2 -> LEVEL 3](#level-2) | 12. [Level 12](#level-12) | 22. [Level 22](#level-22) | 32. [Level 32](#level-32)
-3. [Level 3 -> LEVEL 4](#level-3) | 13. [Level 13](#level-13) | 23. [Level 23](#level-23) | 33. [Level 33](#level-33)
-4. [Level 4 -> LEVEL 5](#level-4) | 14. [Level 14](#level-14) | 24. [Level 24](#level-24)
-5. [Level 5 -> LEVEL 6](#level-5) | 15. [Level 15](#level-15) | 25. [Level 25](#level-25)
-6. [Level 6 -> LEVEL 7](#level-6) | 16. [Level 16](#level-16) | 26. [Level 26](#level-26)
-7. [Level 7 -> LEVEL 8](#level-7) | 17. [Level 17](#level-17) | 27. [Level 27](#level-27)
-8. [Level 8 -> LEVEL 9](#level-8) | 18. [Level 18](#level-18) | 28. [Level 28](#level-28)
-9. [Level 9 -> LEVEL 10](#level-9) | 19. [Level 19](#level-19) | 29. [Level 29](#level-29)
+0. [Level 0](#level-0) | 10. [Level 10](#level-10) | 20. [Level 20](#level-20) | 30. [Level 30](#level-30)
+1. [Level 1](#level-1) | 11. [Level 11](#level-11) | 21. [Level 21](#level-21) | 31. [Level 31](#level-31)
+2. [Level 2](#level-2) | 12. [Level 12](#level-12) | 22. [Level 22](#level-22) | 32. [Level 32](#level-32)
+3. [Level 3](#level-3) | 13. [Level 13](#level-13) | 23. [Level 23](#level-23)
+4. [Level 4](#level-4) | 14. [Level 14](#level-14) | 24. [Level 24](#level-24)
+5. [Level 5](#level-5) | 15. [Level 15](#level-15) | 25. [Level 25](#level-25)
+6. [Level 6](#level-6) | 16. [Level 16](#level-16) | 26. [Level 26](#level-26)
+7. [Level 7](#level-7) | 17. [Level 17](#level-17) | 27. [Level 27](#level-27)
+8. [Level 8](#level-8) | 18. [Level 18](#level-18) | 28. [Level 28](#level-28)
+9. [Level 9](#level-9) | 19. [Level 19](#level-19) | 29. [Level 29](#level-29)
 ******
 
-### [LEVEL 0 -> LEVEL 1]
+### [LEVEL 0]
 For this level, we need to connect to the machine with SSH.
 
 `ssh <username>@<IP> -p 2220`
