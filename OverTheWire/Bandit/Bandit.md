@@ -2,19 +2,19 @@
 
 [*"The Bandit wargame is aimed at absolute beginners. It will teach the basics needed to be able to play other wargames."*](https://overthewire.org/wargames/bandit/)
 
-0. [Level 0](#level-0) | 10. [Level 10](#level-10) | 20. [Level 20](#level-20) | 30. [Level 30](#level-30)
-1. [Level 1](#level-1) | 11. [Level 11](#level-11) | 21. [Level 21](#level-21) | 31. [Level 31](#level-31)
-2. [Level 2](#level-2) | 12. [Level 12](#level-12) | 22. [Level 22](#level-22) | 32. [Level 32](#level-32)
-3. [Level 3](#level-3) | 13. [Level 13](#level-13) | 23. [Level 23](#level-23) | 33. [Level 33](#level-33)
-4. [Level 4](#level-4) | 14. [Level 14](#level-14) | 24. [Level 24](#level-24)
-5. [Level 5](#level-5) | 15. [Level 15](#level-15) | 25. [Level 25](#level-25)
-6. [Level 6](#level-6) | 16. [Level 16](#level-16) | 26. [Level 26](#level-26)
-7. [Level 7](#level-7) | 17. [Level 17](#level-17) | 27. [Level 27](#level-27)
-8. [Level 8](#level-8) | 18. [Level 18](#level-18) | 28. [Level 28](#level-28)
-9. [Level 9](#level-9) | 19. [Level 19](#level-19) | 29. [Level 29](#level-29)
+0. [Level 0 -> LEVEL 1](#level-0) | 10. [Level 10](#level-10) | 20. [Level 20](#level-20) | 30. [Level 30](#level-30)
+1. [Level 1 -> LEVEL 2](#level-1) | 11. [Level 11](#level-11) | 21. [Level 21](#level-21) | 31. [Level 31](#level-31)
+2. [Level 2 -> LEVEL 3](#level-2) | 12. [Level 12](#level-12) | 22. [Level 22](#level-22) | 32. [Level 32](#level-32)
+3. [Level 3 -> LEVEL 4](#level-3) | 13. [Level 13](#level-13) | 23. [Level 23](#level-23) | 33. [Level 33](#level-33)
+4. [Level 4 -> LEVEL 5](#level-4) | 14. [Level 14](#level-14) | 24. [Level 24](#level-24)
+5. [Level 5 -> LEVEL 6](#level-5) | 15. [Level 15](#level-15) | 25. [Level 25](#level-25)
+6. [Level 6 -> LEVEL 7](#level-6) | 16. [Level 16](#level-16) | 26. [Level 26](#level-26)
+7. [Level 7 -> LEVEL 8](#level-7) | 17. [Level 17](#level-17) | 27. [Level 27](#level-27)
+8. [Level 8 -> LEVEL 9](#level-8) | 18. [Level 18](#level-18) | 28. [Level 28](#level-28)
+9. [Level 9 -> LEVEL 10](#level-9) | 19. [Level 19](#level-19) | 29. [Level 29](#level-29)
 ******
 
-### [LEVEL 0]
+### [LEVEL 0 -> LEVEL 1]
 For this level, we need to connect to the machine with SSH.
 
 `ssh <username>@<IP> -p 2220`
@@ -304,4 +304,26 @@ I clone the repo to my computer with git using `git clone ssh://bandit29-git@ban
 
 ![bandit29](.Images/bandit29.png)
 
+******
 
+### [LEVEL 30]
+
+I clone the repo to my computer with git using `git clone ssh://bandit30-git@bandit.labs.overthewire.org:2220/home/bandit30-git/repo` command. I try to check logs and branchs but I cant find anything. I found [this page](https://www.atlassian.com/git/tutorials/inspecting-a-repository) and I see 'secret' tag when I try to `git tag` command. I use `git show secret` command for read this tag.
+
+![bandit30](.Images/bandit30.png)
+
+******
+
+### [LEVEL 31]
+
+I clone the repo to my computer with git using `git clone ssh://bandit31-git@bandit.labs.overthewire.org:2220/home/bandit31-git/repo` command. I see .gitignore file and its ignore \*.txt files. When I read the README, I see we need to do push this repo with key.txt file. I remove the .gitignore file and create key.txt and push this repo.
+
+![bandit31](.Images/bandit31.png)
+
+******
+
+### [LEVEL 32]
+
+In this level when we login bandit32 with ssh, we are in a shell named uppershell. In here I try several things, I login with another bandit and check this shell path, it's in /home/bandit32/uppershell but we can't read it. After a while I realize we can use some things with `$`. We can run '$home', '$pwd', '$path' etc. I try to define variable and call that but I can't. After an eternity later, I decide to check sh man page for learn what can I do with '$'. I search for '$' and I see this: `$0 : zero) Expands to the name	of the shell script if passed on the command line, the name operand if given (with -c) or otherwise argument 0 passed to the shell.`
+
+![bandit32](.Images/bandit32.png)
